@@ -1,17 +1,17 @@
 package com.maddy.user.entities;
 
 public class Rating {
-	private String ratingId;
+	private Integer ratingId;
 	private String userId;
-	private String hotelId;
+	private Integer hotelId;
 	private int rating;
 	private String feedback;
 
-	public String getRatingId() {
+	public Integer getRatingId() {
 		return ratingId;
 	}
 
-	public void setRatingId(String ratingId) {
+	public void setRatingId(Integer ratingId) {
 		this.ratingId = ratingId;
 	}
 
@@ -23,11 +23,11 @@ public class Rating {
 		this.userId = userId;
 	}
 
-	public String getHotelId() {
+	public Integer getHotelId() {
 		return hotelId;
 	}
 
-	public void setHotelId(String hotelId) {
+	public void setHotelId(Integer hotelId) {
 		this.hotelId = hotelId;
 	}
 

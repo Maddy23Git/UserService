@@ -20,8 +20,8 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User saveUser(User user) {
 
-		String randomUserId = UUID.randomUUID().toString();
-		user.setUserId(randomUserId);
+		//String randomUserId = UUID.randomUUID().toString();
+		//user.setUserId(randomUserId);
 		return userRepository.save(user);
 	}
 
@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User getUser(String userId) {
+	public User getUser(Integer userId) {
 		return userRepository.findById(userId)
 				.orElseThrow(() -> new ResourceNotFoundException("User is not found with given ID :" + userId));
 	}
