@@ -11,7 +11,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
+import lombok.Data;
 
+@Data
 @Entity
 @SequenceGenerator(name = "user_seq", initialValue = 101, allocationSize = 1)
 @Table(name = "user")
@@ -27,42 +29,4 @@ public class User {
 
 	@Transient
 	private List<Rating> ratingList = new ArrayList<>(); // It will not save in DB
-
-	public Integer getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getAbout() {
-		return about;
-	}
-
-	public void setAbout(String about) {
-		this.about = about;
-	}
-
-	@Override
-	public String toString() {
-		return "User [userId=" + userId + ", name=" + name + ", email=" + email + ", about=" + about + "]";
-	}
-
 }
